@@ -8,11 +8,12 @@ from stqdm import stqdm
 
 stqdm.pandas()
 
-@st.cache
+
 def get_content(url):
     r = requests.get(url, allow_redirects=True)
     return r.content
-
+    
+@st.cache
 def get_raw_hash(url):
     return hash(get_content(url))
 

@@ -1,0 +1,4 @@
+imagehash
+xlrd
+openpyxl
+stqdm

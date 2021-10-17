@@ -16,7 +16,16 @@ def get_content(url):
 def get_raw_hash(url):
     return hash(get_content(url))
 
+st.set_page_config(
+    page_title="แอพหาภาพสลิปซ้ำ",
+    page_icon="🔎",
+    menu_items={
+        'About': "สร้างโดย @circleoncircles"
+    }
+)
+
 st.title('แอพหาภาพสลิปซ้ำ')
+st.write('สร้างโดย @circleoncircles เพื่อโรงพยาบาลรักษ์สกล')
 
 uploaded_file = st.file_uploader("Choose a csv file", type=["csv"])
 

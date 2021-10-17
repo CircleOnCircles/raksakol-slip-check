@@ -40,7 +40,7 @@ if uploaded_file is not None:
             st.header(f"ชุดที่ {i+1}")
             st.dataframe(sub_df)
             with st.expander("ดูสลิปแรก"):
-                st.image(sub_df[0][slip_url_column])
+                st.image(sub_df.iloc[0][slip_url_column])
             with st.expander("ดูสลิปทั้งหมด"):
                 cols = st.columns(len(sub_df))
                 for img_url, col in zip(sub_df[slip_url_column], cols):
